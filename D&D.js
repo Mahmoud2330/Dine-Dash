@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { class: 'fas fa-users', size: 240 }
     ];
 
-    // New balanced positions for each icon (spread across the screen)
+    // balanced positions for each icon (across the screen)
     const positions = [
         { left: 15, top: 15 }, // Top-left RECEIPT
         { left: 65, top: 20 }, // Top-right WALLET
