@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Allow enough space for scrolling */
+}
+
+section#home {
+    background: linear-gradient(160deg, #000, #434140); /* Gradient background */
+    color: #fff;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    
+}
+
+.home-content {
+    position: relative;
+    z-index: 2; /* Set a higher z-index for the text to ensure it stays above the bubbles */
+}
+
+/*RECEIPT INSTEAD OF BUBBLES*/
+.receipt {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s linear; /* Smooth transition for scroll movement */
+    opacity: 0.2; /* Increased opacity for more visibility */
+    z-index: 0; /* Ensure they are behind the content */
+}
+
+.receipt i {
+    color: rgba(255, 255, 255, 0.7); /* Increased icon color opacity */
+    width: 100%;  /* Ensure the icon fills the container */
+    height: 100%; /* Keep the icon proportional */
+}
+
+
+
+
+/*BUBBLE EFFECT*/
+.bubble {
+    position: absolute;
+    top: -150px;
+    width: 50px;
+    height: 50px;
+    background: rgba(199, 195, 195, 0.2); /* Base color for bubbles */
+    border-radius: 50%;
+    box-shadow: inset -10px -10px 15px rgba(0, 0, 0, 0.3), inset 10px 10px 15px rgba(255, 255, 255, 0.2); /* For 3D effect */
+    opacity: 0.9;
+    transition: transform 0.1s linear; /* Smooth transition for scroll movement */
+    z-index: 0;
+}
+
+/* 3D Bubble colors based on palette */
+.bubble:nth-child(odd) {
+    background-color: rgba(67, 65, 64, 0.3); /* Matching color from gradient */
+}
+
+.bubble:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker bubbles */
+}
+
+
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+section#about {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+/*.rotating-image {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+    height: 300px;
+    background-image: url('image-removebg-preview-2.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 0%; 
+    transition: transform 0.1s linear; 
+} */
